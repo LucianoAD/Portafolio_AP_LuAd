@@ -1,0 +1,75 @@
+.projects-list{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    margin-bottom: 80px;
+    gap: 20px;
+  }
+  
+  .project-info{
+    width: 18rem;
+    height: 27rem;
+    background-image: linear-gradient(#000000, #300435, rgba(83, 9, 86, 0.3)), url("src/assets/img/backgrounds/binary_code.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border: solid #fcfcfe;
+    border-radius: 25% 10%;
+    transition: .25s;
+  }
+  
+  .project-info:hover{
+  
+    width: 18rem;
+    height: 29rem;
+    cursor: default;
+  }
+  
+  .project-info h3{
+    
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #F39422;
+    text-align: center;
+    margin-top: 20;
+  }
+  
+  .project-info h4, .project-info p{
+  
+    color: #fff;
+    text-align: center;
+  }
+  
+  .project-info h3{
+  
+    font-size: 1.1575rem;
+  }
+  
+  .project-info h4{
+  
+    font-size: 1.125rem;
+  }
+  
+  .project-info p{
+  
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 1.0625rem;
+  }
+  
+  .project-info a{
+  
+    font-size: clamp(12px, 5vw, 16px);
+    color: #eaeaed;
+    padding: 5px 15px;
+    cursor: pointer;
+  }
+  

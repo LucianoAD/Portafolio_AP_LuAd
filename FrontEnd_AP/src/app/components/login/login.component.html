@@ -1,0 +1,19 @@
+<div class="box"  
+style="text-align:center"
+data-aos="fade-down" data-aos-duration="1000">
+	<h2>Login</h2>
+	<form>
+	  <div class="inputBox">
+		<input type="text" name="Username" required onkeyup="this.setAttribute('value', this.value);" value="">
+		<label>Username</label>
+	  </div>
+	  <div class="inputBox">
+		<input type="password" name="password" required value=""
+			   onkeyup="this.setAttribute('value', this.value);"
+			   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+			   title="Debe contener al menos un número, una letra mayúscula y 6 o más caracteres">
+		<label>Password</label>
+	  </div>
+	  <input type="submit" name="sign-in" value="Sign In">
+	</form>
+  </div>

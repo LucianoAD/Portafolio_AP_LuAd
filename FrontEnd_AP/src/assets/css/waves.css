@@ -1,0 +1,74 @@
+.wave{
+
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    background: url("assets/img/backgrounds/wave.png");
+    animation: animate 20s linear infinite;
+    
+}
+
+.top-wave{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    margin-top: 0px;
+}
+
+.top-wave svg{
+
+    position: relative;
+    display: block;
+    width: calc(156% + 1.3px);
+    height: 110px;
+}
+
+.top-wave .shape-fill {
+
+    fill: #000000;
+}
+
+.bottom-wave, .home-wave{
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.bottom-wave svg, .home-wave svg{
+
+    position: relative;
+    display: block;
+    width: calc(156% + 1.3px);
+    height: 110px;
+}
+
+.bottom-wave .shape-fill {
+
+    fill: #040000;
+}
+
+.bottom-wave {
+
+    fill: #000000;
+}
+
+.home-wave svg{
+
+    filter: invert(100%);
+}
+
+.home-wave .home-shape-fill {
+
+    fill: black;
+    stroke: black;
+}

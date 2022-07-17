@@ -1,0 +1,131 @@
+header{
+
+    position: fixed;
+    box-shadow: inset 0 0 5px 0 #f9f9fa;
+    background-color: #000000;
+    height: 51px;
+    width: 100%;
+    line-height: 50px;
+    list-style: none;
+    font-weight: bold;
+    z-index: 1;
+  }
+  
+  img, svg {
+    vertical-align: middle;
+    height: 40px;
+    margin-left: 20px;
+}
+  .menu{
+  
+    float: right;
+    margin-right: 20px;
+  }
+  
+  .options{
+  
+    display: inline-block;
+    margin: 0 5px;
+  }
+  .options2{
+  
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+    .options a{
+  
+    color: #f3f3fa;
+    font-size: 17px;
+    text-decoration: none;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .options a::after{
+  
+    background-color: #353564;
+    border-radius: 3px;
+  }
+  
+ 
+  .menu .active{
+  
+      background-color: #353564;
+  }
+  
+  .menu .active, .options a:hover{
+  
+    color: #fff;
+      transition: .5s;
+  }
+  
+  .menu-btn{
+  
+    font-size: 30px;
+    color: #ffffff;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #side-menu-btn{
+  
+    display: none;
+  }
+
+  @media screen and (max-width: 830px){
+  
+    .menu-btn{
+  
+      display: block;
+    }
+  
+    .menu{
+  
+      position: fixed;
+      width: 280px;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(15px);
+      top: 51px;
+      left: -100%;
+      text-align: center;
+      box-shadow: inset 0 0 5px 0 #ffffff;
+      transition: all .5s;
+    }
+  
+    .menu li{
+  
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+  
+    .options a{
+  
+      color: #fff;
+      border-bottom: rgb(0, 0, 0);
+    }
+  
+    .options a:hover, .menu .active{
+  
+      color: #fff;
+    }
+  
+    #side-menu-btn:checked ~ .menu-btn{
+  
+      color: #fff;
+    }
+  
+    #side-menu-btn:checked ~ .menu{
+  
+      left: 0;
+    }
+  }
+  
+ 
+  

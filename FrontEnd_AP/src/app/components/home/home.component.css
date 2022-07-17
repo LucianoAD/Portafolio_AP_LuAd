@@ -1,0 +1,76 @@
+.home{
+  width: 100%;
+  display: flex;
+  margin: 0 0 -20px;
+  position: relative;
+  flex-wrap: wrap;
+	flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  background-image: url("src/assets/img/backgrounds/homeBackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+	background-position: bottom;
+  background-attachment: local;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  column-gap: 80px;
+  row-gap: 20px;
+}
+
+.home h1, .home h2, .home h3{
+
+  font-family: 'Kaushan Script', cursive;
+  color: #fff;
+}
+
+.home span{
+
+  font-family: 'Kaushan Script', cursive;
+  color: #F39422;
+}
+
+.home h1{
+
+  font-size: clamp(45px, 12vw, 80px);
+}
+
+.home h2{
+
+  font-size: clamp(30px, 8vw, 50px);
+}
+
+.home h3{
+
+  font-size: clamp(25px, 8vw, 40px);
+}
+
+.welcome{
+
+  flex-direction: column;
+  text-align: center;
+  background-image: linear-gradient(#050505, rgba(10, 10, 10, 0.2));
+}
+
+.cv{
+
+  margin-top: clamp(25px, 5vw, 50px);
+  margin-bottom: 0px;
+}
+
+.cv a{
+
+	font-size: clamp(12px, 5vw, 17px);
+  font-weight: bold;
+  padding: 5px 15px;
+}
+
+.home img{
+  display: inline-block; 
+  position: relative; 
+  height: auto; 
+  overflow: hidden; 
+  width: 400px;
+  border-radius: 50%;
+  border: 5px solid #040404;
+}
