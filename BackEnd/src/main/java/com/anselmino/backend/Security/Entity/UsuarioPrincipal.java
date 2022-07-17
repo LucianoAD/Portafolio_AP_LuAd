@@ -74,7 +74,7 @@ public class UsuarioPrincipal implements UserDetails {
     }
 
     public String getNombreUsuario() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return nombreUsuario;
     }
 }
 

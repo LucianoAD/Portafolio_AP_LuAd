@@ -30,17 +30,16 @@ public class MainSecurity extends WebSecurityConfigurerAdapter {
     JwtEntryPoint jwtEntryPoint;
 
     @Bean
-    public JwtTokenFilter jwtTokenFilter(){
+    public JwtTokenFilter jwtTokenFilter() {
         return new JwtTokenFilter();
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder(){
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
     //Override de metodos:
-    
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable() //deshabilita opciones
@@ -51,27 +50,23 @@ public class MainSecurity extends WebSecurityConfigurerAdapter {
                 .exceptionHandling().authenticationEntryPoint(jwtEntryPoint)
                 .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-       http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
-            }
-    
+        http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+    }
+
     @Override
     protected AuthenticationManager authenticationManager() throws Exception {
         return super.authenticationManager();
     }
-    
-     @Override
+
+    @Bean
+    @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
-    
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsServicesImpl).passwordEncoder(passwordEncoder());
     }
 
-   
-
-    
-    }
-
-    
+}
