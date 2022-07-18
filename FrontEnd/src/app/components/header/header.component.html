@@ -5,14 +5,15 @@
      <label for="side-menu-btn" class="menu-btn">
         <i class="fas fa-bars"></i>
       </label>
-      <img src="assets/img/logoAP.jpg" alt="logoAP">
+      <a href="http://localhost:4200"><img src="assets/img/logoAP.jpg" alt="logoAP"></a>
       <ul class="menu" id="menu">
         <li class="options"><a class="btn-style" id="home-btn">Home</a></li>
         <li class="options"><a class="btn-style" id="aboutme-btn">About me</a></li>
         <li class="options"><a class="btn-style" id="tech-btn">Technologies and Skills</a></li>
         <li class="options"><a class="btn-style" id="projects-btn">Projects</a></li>
-        <li class="options"><a class="btn-style" id="contact-btn">Contact</a></li>
-        <li class="options2"><a href="/login" class="login-btn" id="login-btn" >Login</a></li>
+        <li class="options"><a class="btn-style" id="contact-btn" >Contact</a></li>
+        <li class="options2"><a href="/login" class="login-btn" id="login-btn" (click)="login()" *ngIf="!isLogged">Login</a></li>
+        <li class="options2"><a class="login-btn" id="login-btn" (click)="onLogOut()" *ngIf="isLogged">Logout</a></li>
       </ul>
     </nav>
   </header>
