@@ -8,7 +8,7 @@ import { PersonaService } from 'src/app/service/persona.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  persona: persona = new persona("","","","","");
+  persona: persona = new persona("","","","","","","","","","","");
 
   constructor(public personaService: PersonaService) {}
 
