@@ -38,7 +38,8 @@ export class LoginComponent implements OnInit {
         this.tokenService.setUserName(data.nombreUsuario);
         this.tokenService.setAuthorities(data.authorities);
         this.roles = data.authorities;
-        this.router.navigate([''])
+        this.router.navigate(['']);
+        window.location.href=""
       }, err =>{
         this.isLogged = false;
         this.isLogginFail = true;
@@ -47,5 +48,6 @@ export class LoginComponent implements OnInit {
         
       })
   }
-
+  
 }
+

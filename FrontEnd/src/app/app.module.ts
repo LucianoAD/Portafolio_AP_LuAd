@@ -14,6 +14,7 @@ import { LoginComponent } from './components/login/login.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { FormsModule } from '@angular/forms';
 import { interceptorProvider } from './service/interceptor-service';
+import { AuthService } from './service/auth.service';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { interceptorProvider } from './service/interceptor-service';
     LoginComponent,
     MainpageComponent],
   providers: [
-    interceptorProvider 
+    interceptorProvider,
+    AuthService 
   ],
   bootstrap: [AppComponent]
 })

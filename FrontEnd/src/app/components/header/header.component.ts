@@ -26,6 +26,7 @@ export class HeaderComponent implements OnInit {
   }
 
   login(){
-    this.router.navigate(['login'])
+      this.router.navigate(['/login'])
+      window.location.href=""
+         }
   }
-}

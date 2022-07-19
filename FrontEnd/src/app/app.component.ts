@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 declare const clickEvent: any;
 
 @Component({
@@ -12,4 +13,5 @@ export class AppComponent {
   OnClic(){
     clickEvent();
   }
+
 }
