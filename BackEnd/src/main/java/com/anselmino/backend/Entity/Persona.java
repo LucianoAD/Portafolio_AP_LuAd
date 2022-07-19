@@ -17,13 +17,12 @@ public class Persona {
     @GeneratedValue ( strategy = GenerationType.IDENTITY)
     private Long id;
     @NotNull
-    @Size(min = 1, max = 50, message = "La longitud del nombre debe ser de entre 1 a 50 carácteres")
+    @Size(min = 1, max = 50, message = "El nombre ingresado debe tener entre 1 y 50 carácteres")
     private String nombre;
     @NotNull
     @Size(min = 1, max = 50, message = "La longitud del apellido debe ser de entre 1 a 50 carácteres")
     private String apellido;
-    @Size(min = 1, max = 500, message = "La logitud del nombre debe ser de entre 1 a 50 carácteres")
+    private String cv;
     private String imgbackground;
-    @Size(min = 1, max = 500, message = "La logitud del nombre debe ser de entre 1 a 50 carácteres")
     private String img;  
 }

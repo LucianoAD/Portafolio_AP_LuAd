@@ -49,6 +49,4 @@ export class TokenService {
     window.sessionStorage.clear();
     
     }
-
-
-}
+  }

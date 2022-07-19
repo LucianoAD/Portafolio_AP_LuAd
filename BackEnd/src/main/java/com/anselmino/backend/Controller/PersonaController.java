@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
+
 public class PersonaController {
     @Autowired IPersonaService ipersonaService;
     
@@ -39,23 +40,25 @@ public String deletePersona(@PathVariable Long id ){
     return "La persona fue eliminada correctamente";
 }
 
-@PreAuthorize("hasRole('ADMIN')")
-@PutMapping("/personas/editar/{id}")
-public Persona editPersona(@PathVariable Long id,
-        @RequestParam ("nombre") String nuevoNombre,
-        @RequestParam ("apellido") String nuevoApellido,
-        @RequestParam ("imgbackground") String nuevaimgbackground,
-        @RequestParam ("img") String nuevaimg){
+    @PreAuthorize("hasRole('ADMIN')")
+    @PutMapping("/personas/editar/{id}")
+    public Persona editPersona(@PathVariable Long id,
+            @RequestParam("nombre") String nuevoNombre,
+            @RequestParam("apellido") String nuevoApellido,
+            @RequestParam("cv") String nuevoCv,
+            @RequestParam("imgbackground") String nuevaImgBackground,
+            @RequestParam("img") String nuevaImg) {
 
         Persona persona = ipersonaService.findPersona(id);
         persona.setNombre(nuevoNombre);
         persona.setApellido(nuevoApellido);
-        persona.setImgbackground(nuevaimgbackground);
-        persona.setImg(nuevaimg);
-                
-    ipersonaService.savePersona(persona);
-    return persona;
-                }
+        persona.setCv(nuevoCv);
+        persona.setImgbackground(nuevaImgBackground);
+        persona.setImg(nuevaImg);
+
+        ipersonaService.savePersona(persona);
+        return persona;
+    }
 
 @GetMapping("/personas/traer/perfil")
     public Persona findPersona(){
