@@ -55,7 +55,6 @@ public String deletePersona(@PathVariable Long id ){
         persona.setImgbackground(nuevaImgBackground);
         persona.setImg(nuevaImg);
        
-
         ipersonaService.savePersona(persona);
         return persona;
     }
