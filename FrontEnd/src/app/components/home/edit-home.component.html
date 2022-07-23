@@ -1,0 +1,28 @@
+<div class="box col-centered" style="text-align:center"
+data-aos="fade-up" data-aos-duration="1000" *ngIf="personaEdit" >
+<h2>Edit profile</h2>
+            <form (ngSubmit)="onEdit()" novalidate #f="ngForm" >
+                <div class="inputBox">
+                    <input type="text" id="nombre" name="nombre" [(ngModel)]="personaEdit.nombre" required>
+                    <label for="nombre">Enter your name:</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" id="apellido" name="apellido" [(ngModel)]="personaEdit.apellido" required>
+                    <label for="apellido">Enter your last name:</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text"  id="cv" name="cv" [(ngModel)]="personaEdit.cv" required>
+                    <label for="img">Enter your URL CV document:</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text"  id="imgbackground" name="imgbackground" [(ngModel)]="personaEdit.imgbackground" required>
+                    <label for="img">Enter your URL background image:</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text"  id="img" name="img" [(ngModel)]="personaEdit.img" required>
+                    <label for="img">Enter your URL profile photo:</label>
+                </div>
+                <input type="submit" name="Update profile" value="Update profile">
+                <input type="reset" (click)="cancel()" value="Cancel">
+            </form>
+        </div>

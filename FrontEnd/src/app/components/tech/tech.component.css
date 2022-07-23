@@ -1,106 +1,167 @@
-.tech, .projects, .contact {
+.tech,
+.projects,
+.contact {
 
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  
-  .tech, .projects{
-  
-    height: auto;
-  }
-  
-  
-  .tech{
-    padding-top: 80px;
-    padding-bottom: 100px;
-  }
-  
-  .tech h1, .contact h1{
-  
-    color: rgb(6, 6, 6);
-  }
-  
-  .projects h1{
-  
-    color: #f9f9fc;
-  }
-  
-  .tech h1, .projects h1 {
-  
-    text-align: center;
-    margin: 1.875rem 1.25rem;
-    font-family: 'Kaushan Script', cursive;
-      font-size: clamp(40px, 8vw, 60px);
-  }
-  
-  .tech h1 span, .projects h1 span{
-  
-    color: #F39422;
-  }
-  
-  .tech-icons{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 3.125rem;
-    margin-bottom: 30px;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-  
-  
-  
-  .tech-div{
-    position: relative;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    display:flex;
-    position: relative;
-    border-radius: 25px;
-    background-color: #fff;
-    box-shadow: 0 0 20px 0 #6b6b68;
-    transition: .25s;
-    height: 13rem;
-  }
- 
- 
-  
-  .tech-div:hover > h4{
-  
-    width: 13rem;
-    height: 15rem;
-    cursor: default;
-    color: #000000;
-  }
-  
-  
-  .tech-div h3{
-  
-    color: #070707;
-    text-align: center;
-    font-size: 1.1875rem;
-  }
-  
-  .tech-div h4{
-  
-    color: #ffffff;
-    text-align: center;
-    font-size: 1.1875rem;
-    font-family:fantasy;
-    font-family: cursive;
-  }
-
-
-  circle-progress {
-    margin-bottom: -20px;
-    
-   
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
 }
+
+.tech,
+.projects {
+
+  height: auto;
+}
+
+
+.tech {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.tech h1,
+.contact h1 {
+
+  color: rgb(6, 6, 6);
+}
+
+.projects h1 {
+
+  color: #f9f9fc;
+}
+
+.tech h1,
+.projects h1 {
+
+  text-align: center;
+  margin: 1.875rem 1.25rem;
+  font-family: 'Kaushan Script', cursive;
+  font-size: clamp(40px, 8vw, 60px);
+}
+
+.tech h1 span,
+.projects h1 span {
+
+  color: #F39422;
+}
+
+.tech-icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3.125rem;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.tech-div {
+  position: relative;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  display: flex;
+  position: relative;
+  border-radius: 25px;
+  background-color: #fff;
+  box-shadow: 0 0 20px 0 #6b6b68;
+  transition: .25s;
+  height: 13rem;
+ 
+}
+
+.tech-div:hover>h4 {
+
+  width: 13rem;
+  height: 15rem;
+  cursor: default;
+  color: #000000;
+}
+
+
+.tech-div h3 {
+
+  color: #070707;
+  text-align: center;
+  font-size: 1.1875rem;
+}
+
+.tech-div h4 {
+
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.1875rem;
+  font-family: fantasy;
+  font-family: cursive;
+}
+
+
+circle-progress {
+  margin-bottom: -20px;
+  
+}
+
+.fab-container {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+}
+
+.iconbutton {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background: #ffffff;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+
+.iconbutton i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: white;
+}
+
+.options li {
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px;
+}
+
+.options {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  right: 30px;
+}
+
+.options2 {
+  list-style-type:none;
+  position: absolute;
+  bottom: 120px;
+  right: -30px;
+}
+
+.material-icons {
+border-radius: 25% 40%;
+text-shadow: 0 0 10px rgb(104, 104, 106);
+cursor: pointer;
+
+}
+
+.add {
+  border-radius:100%;
+  cursor: pointer;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  }
+
+
 

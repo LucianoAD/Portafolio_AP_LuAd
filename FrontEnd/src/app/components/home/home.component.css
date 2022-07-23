@@ -7,7 +7,6 @@
 	flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  background-image: url("src/assets/img/backgrounds/homeBackground.png");
   background-repeat: no-repeat;
   background-size: cover;
 	background-position: bottom;
@@ -74,3 +73,58 @@
   border-radius: 50%;
   border: 5px solid #040404;
 }
+
+.fab-container {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+}
+
+.iconbutton {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background: #ffffff;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+
+.iconbutton i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: white;
+}
+
+.options li {
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px;
+}
+
+.options {
+  position: absolute;
+  top: 100px;
+  right: 60px;
+}
+
+
+.mat-icon {
+  color: #fff;
+  text-shadow: 0 0 10px rgb(104, 104, 106);
+  cursor: pointer;
+  cursor: pointer;
+  font-size: 40px;
+  display: flex;
+
+
+}
+
+
+
+
+
+
+

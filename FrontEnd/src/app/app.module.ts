@@ -15,6 +15,12 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { FormsModule } from '@angular/forms';
 import { interceptorProvider } from './service/interceptor-service';
 import { AuthService } from './service/auth.service';
+import { NewTecnologiasComponent } from './components/tech/new-tecnologias.component';
+import { MatIconModule } from '@angular/material/icon';
+import { EditTecnologiasComponent } from './components/tech/edit-tecnologias.component';
+import { DeleteTecnologiasComponent } from './components/tech/delete-tecnologias.component';
+import { EditHomeComponent } from './components/home/edit-home.component';
+
 
 
 @NgModule({
@@ -28,13 +34,18 @@ import { AuthService } from './service/auth.service';
     AboutComponent,
     LoginComponent,
     MainpageComponent,
+    NewTecnologiasComponent,
+    EditTecnologiasComponent,
+    DeleteTecnologiasComponent,
+    EditHomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatIconModule
   ],
   exports: [  
     AppComponent,

@@ -8,14 +8,34 @@ data-aos-duration="500">
   </svg>
 </div>
 <h1><b>Technologies and <span>Skills</span></b></h1>
+
+<ul class="options" *ngIf="isLogged">
+  <li>
+  <span class="btn-label"></span>
+  <i class="fa-brands"><mat-icon class="add" href="/newtech" (click)="newtech()" *ngIf="isLogged">add</mat-icon></i>
+  </li>
+  </ul>
+
 <div class="tech-icons" id="tech-icons" data-aos="zoom-in-right" data-aos-duration="500">
-  <div class="tech-div" data-aos="zoom-in-right" data-aos-duration="500">
-  <circle-progress
-  [imageSrc]="'../assets/img/icons/html.png'"
+  <div class="tech-div" data-aos="zoom-in-right" data-aos-duration="500" *ngFor=" let Tecnologias of tecnologias">
+    <ul class="options2" *ngIf="isLogged">
+    <li>
+    <span class="btn-label"></span>
+    <i class="fa-brands"><mat-icon style="font-family: 'Material Icons Sharp'"  routerLink="/edittech/{{Tecnologias.id}}" *ngIf="isLogged">edite</mat-icon></i>
+    </li>
+    <li>
+    <span class="btn-label"></span>
+    <i class="fa-brands"><mat-icon style="font-family: 'Material Icons Sharp'"  (click)="delete(Tecnologias.id)" *ngIf="isLogged">delete</mat-icon></i>
+    </li>
+    </ul>
+  <circle-progress 
+  [title]="(' + Tecnologias.title + ')"
+  [showTitle]="false"
+  [imageSrc]="Tecnologias.imgtech"
   [showImage]="true"
   [imageHeight]="90"
   [imageWidth]="90"
-  [percent]="85"
+  [percent]= "+Tecnologias.perctech"
   [showSubtitle] = true
   [radius]="80"
   [outerStrokeWidth]="10"
@@ -27,7 +47,7 @@ data-aos-duration="500">
   [lazy]="true"
   [outerStrokeLinecap]="'square'"
 ></circle-progress>
-<h4><b>&nbsp;&nbsp;85%</b></h4>
+<h4><b>&nbsp;&nbsp; {{Tecnologias.perctech}}%</b></h4>
 </div>
 </div>
 <div class="bottom-wave">

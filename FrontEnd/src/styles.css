@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@500;600&display=swap');
+@import '~material-icon-font/dist/Material-Icons.css';
 
 @media screen and (max-width: 1009px){
 
@@ -145,4 +146,8 @@
 .light-color{
 
   background-color: #fff;
+}
+
+.material-icons {
+  font-family: 'Material Icons Outline'
 }

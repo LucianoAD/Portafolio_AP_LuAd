@@ -1,0 +1,21 @@
+
+<div class="box col-centered" style="text-align:center"
+data-aos="fade-up" data-aos-duration="1000" *ngIf="techEdit" >
+<h2>Edit skill</h2>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" >
+                <div class="inputBox">
+                    <input type="text" id="title" name="title" [(ngModel)]="techEdit.id" required>
+                    <label for="title">Edit skill name:</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" id="imgtech" name="imgtech" [(ngModel)]="techEdit.imgtech" required>
+                    <label for="imgtech">Edit skill logo (url):</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text"  id="perctech" name="perctech" [(ngModel)]="techEdit.perctech" required>
+                    <label for="perctech">Edit knowledge percentage:</label>
+                </div>
+                <input type="submit" name="Update skill" value="Update skill">
+                <input type="reset" (click)="cancel()" value="Cancel">
+            </form>
+        </div>

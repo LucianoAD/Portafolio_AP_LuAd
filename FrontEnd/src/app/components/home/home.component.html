@@ -1,4 +1,10 @@
-<div class="home" id="home">
+<div class="home" id="home" [ngStyle]="{ 'background-image': 'url(' + persona.imgbackground + ')' }">
+  <ul class="options" *ngIf="isLogged">
+    <li>
+    <span class="btn-label"></span>
+    <i class="fa-brands"><mat-icon routerLink="/editar/{{persona.id}}" *ngIf="isLogged">edit</mat-icon></i>
+    </li>
+    </ul>
     <div class="welcome" data-aos="fade-up" data-aos-duration="1000">
       <h3>¡Hello!, my name is</h3>
       <h1 id="nombre"><span>{{persona.nombre}}</span> {{persona.apellido}}</h1>

@@ -1,0 +1,20 @@
+<div class="box col-centered" style="text-align:center"
+data-aos="fade-up" data-aos-duration="1000">
+<h2>Add a new skill</h2>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm" >
+                <div class="inputBox">
+                    <input type="text" id="title" name="title" [(ngModel)]="title" required>
+                    <label for="title">Enter your skill name:</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" id="imgtech" name="imgtech" [(ngModel)]="imgtech" required>
+                    <label for="imgtech">Skill logo (url):</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text"  id="perctech" name="perctech" [(ngModel)]="perctech" required>
+                    <label for="perctech">How much do you know about this? (%):</label>
+                </div>
+                <input type="submit" name="Add skill" value="Add skill">
+                <input type="reset" (click)="cancel()" value="Cancel">
+            </form>
+        </div>
