@@ -1,7 +1,7 @@
 package com.anselmino.backend.Controller;
 
 import com.anselmino.backend.Entity.Persona;
-import com.anselmino.backend.Interface.IPersonaService;
+import com.anselmino.backend.Service.ImpPersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "http://localhost:4200")
 
 public class PersonaController {
-    @Autowired IPersonaService ipersonaService;
+    @Autowired ImpPersonaService ipersonaService;
     
     @GetMapping("/personas/traer")
     public List<Persona> getPersona(){
@@ -47,26 +47,14 @@ public String deletePersona(@PathVariable Long id ){
             @RequestParam("apellido") String nuevoApellido,
             @RequestParam("cv") String nuevoCv,
             @RequestParam("imgbackground") String nuevaImgBackground,
-            @RequestParam("img") String nuevaImg,
-            @RequestParam("imgaboutme") String nuevaImgAboutMe,
-            @RequestParam("mydescription") String nuevaMyDescription,
-            @RequestParam("myinterest1") String nuevoMyInterest1,
-            @RequestParam("myinterest2") String nuevoMyInterest2,
-            @RequestParam("myinterest3") String nuevoMyInterest3,
-            @RequestParam("myinterest4") String nuevoMyInterest4) {
-
+            @RequestParam("img") String nuevaImg) {
         Persona persona = ipersonaService.findPersona(id);
         persona.setNombre(nuevoNombre);
         persona.setApellido(nuevoApellido);
         persona.setCv(nuevoCv);
         persona.setImgbackground(nuevaImgBackground);
         persona.setImg(nuevaImg);
-        persona.setImgaboutme(nuevaImgAboutMe);
-        persona.setMydescription(nuevaMyDescription);
-        persona.setMyinterest1(nuevoMyInterest1);
-        persona.setMyinterest2(nuevoMyInterest2);
-        persona.setMyinterest3(nuevoMyInterest3);
-        persona.setMyinterest4(nuevoMyInterest4);
+       
 
         ipersonaService.savePersona(persona);
         return persona;

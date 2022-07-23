@@ -13,7 +13,7 @@ public interface IPersonaService {
     public void deletePersona(Long Id);
     //buscar una persona
     public Persona findPersona(Long Id);
-    
+   
     
     
 }
