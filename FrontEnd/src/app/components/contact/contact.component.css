@@ -52,3 +52,67 @@
     gap: 10px;
     border-color: #000000;
   }
+
+  .fab-container {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+  }
+  
+  .iconbutton {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: #ffffff;
+    box-shadow: 10px 10px 5px #aaaaaa;
+  }
+  
+  
+  .iconbutton i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+  }
+  
+  .options li {
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px;
+  }
+  
+  .options {
+    position: absolute;
+    top: 50px;
+    right: 40px;
+  }
+  
+  
+  .mat-icon {
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 10px rgb(104, 104, 106);
+    cursor: pointer;
+    cursor: pointer;
+    font-size: 40px;
+    display: flex;
+    border-radius: 100%;
+    border-style: solid;
+    border-right-width: 2px;
+    padding: 0.3em;
+    width:50px;
+    text-align: center;
+    display: inline;
+    border-radius: 50%;
+    line-height: 50px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  

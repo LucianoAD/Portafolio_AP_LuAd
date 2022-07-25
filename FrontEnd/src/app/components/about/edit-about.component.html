@@ -1,0 +1,32 @@
+<div class="box col-centered" style="text-align:center"
+data-aos="fade-up" data-aos-duration="1000" *ngIf="aboutEdit" >
+<h2>Edit your infomation</h2>
+            <form (ngSubmit)="onEdit()" novalidate #f="ngForm" >
+                <div class="inputBox">
+                    <input type="text" id="imgaboutme" name="imgaboutme" [(ngModel)]="aboutEdit.imgaboutme" required>
+                    <label for="imgaboutme">Enter a URL picture: </label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" id="mydescription" name="mydesctiption" [(ngModel)]="aboutEdit.mydescription" required>
+                    <label for="mydescription">Enter your description:</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text"  id="myinterest1" name="myinterest1" [(ngModel)]="aboutEdit.myinterest1" required>
+                    <label for="img">Enter your interest 1:</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text"  id="myinterest2" name="myinterest2" [(ngModel)]="aboutEdit.myinterest2" required>
+                    <label for="img">Enter your interest 2:</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text"  id="myinterest3" name="myinterest3" [(ngModel)]="aboutEdit.myinterest3" required>
+                    <label for="img">Enter your interest 3:</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text"  id="img" name="img" [(ngModel)]="aboutEdit.myinterest4" required>
+                    <label for="img">Enter your interest 4:</label>
+                </div>
+                <input type="submit" name="Update information" value="Update information">
+                <input type="reset" (click)="cancel()" value="Cancel">
+            </form>
+        </div>

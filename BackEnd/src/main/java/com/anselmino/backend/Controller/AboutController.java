@@ -1,7 +1,6 @@
 package com.anselmino.backend.Controller;
 
 import com.anselmino.backend.Entity.About;
-import com.anselmino.backend.Interface.IAboutService;
 import com.anselmino.backend.Service.ImpAboutService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

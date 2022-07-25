@@ -13,7 +13,7 @@ import { AboutService } from 'src/app/service/about.service';
 export class AboutComponent implements OnInit {
   about: About = new About("","","","","","");
 
-  constructor(public aboutService: AboutService, private tokenService: TokenService, private router:Router) {}
+  constructor(public aboutService: AboutService, private tokenService: TokenService) {}
 
   cargarAbout(): void {
     this.aboutService.getAbout().subscribe(data => {this.about = data})

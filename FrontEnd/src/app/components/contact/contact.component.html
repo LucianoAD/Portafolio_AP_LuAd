@@ -9,18 +9,24 @@
       </svg>
   </div>
   <div class="contact-me">
+    <ul class="options" *ngIf="isLogged">
+      <li>
+      <span class="btn-label"></span>
+      <i class="fa-brands"><mat-icon routerLink="/editcontact/{{contact.id}}" *ngIf="isLogged">edit</mat-icon></i>
+      </li>
+      </ul>
     <h1><b>Contact<span> Me</span></b></h1>
       <div class="sm-icons">
-        <a href="mailto:luciano.anselmino@gmail.com" target="_blank">
+        <a href="mailto:{{contact.gmail}}" target="_blank">
           <img src="assets/img/social media/gmail.svg" alt="gmail">
         </a>
-        <a href="https://github.com/LuAd" target="_blank">
+        <a href={{contact.git}} target="_blank">
           <img src="assets/img/social media/github.svg" alt="github">
         </a>
-        <a href="https://www.linkedin.com/in/luciano-anselmino-584b27116/" target="_blank">
+        <a href="{{contact.linkedin}}" target="_blank">
           <img src="assets/img/social media/linkedin.png" alt="linkedin">
         </a>
-        <a href="mailto:luciano.anselmino@hotmail.com" target="_blank">
+        <a href="'mailto:'{{contact.hotmail}}" target="_blank">
           <img src="assets/img/social media/outlook.svg" alt="outlook">
         </a>
       </div>

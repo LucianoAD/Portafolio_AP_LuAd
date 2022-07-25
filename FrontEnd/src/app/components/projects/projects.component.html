@@ -3,6 +3,29 @@ id="projects"
 data-aos="fade-up"
 data-aos-duration="500">
 <h1>My <span>Projects</span></h1>
-<div class="projects-list"
-  id="project-list"></div>
+<ul class="options" *ngIf="isLogged">
+  <li>
+  <span class="btn-label"></span>
+  <i class="fa-brands"><mat-icon class="add" href="/newproject" (click)="newproject()" *ngIf="isLogged">add</mat-icon></i>
+  </li>
+  </ul>
+<div class="div-direction justify-content-center">
+<div class="projects-list" id="project-list" data-aos="zoom-in-right" data-aos-duration="500" *ngFor=" let projects of projects">
+  <ul class="options2" *ngIf="isLogged">
+    <li>
+    <span class="btn-label"></span>
+    <i class="fa-brands"><mat-icon style="font-family: 'Material Icons Sharp'"  routerLink="/editproject/{{projects.id}}" *ngIf="isLogged">edit</mat-icon></i>
+    </li>
+    <li>
+    <span class="btn-label"></span>
+    <i class="fa-brands"><mat-icon style="font-family: 'Material Icons Sharp'"  (click)="delete(projects.id)" *ngIf="isLogged">delete</mat-icon></i>
+    </li>
+    </ul>
+<div class="project-info">
+  <h3>{{projects.title}}</h3>
+  <h4>{{projects.tech}}</h4>
+  <p>{{projects.description}}</p>
+  <a class="light-btn" href={{projects.url}}><b>More..</b></a>
+</div>
+</div>
 </div>

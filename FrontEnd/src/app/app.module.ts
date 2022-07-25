@@ -18,8 +18,11 @@ import { AuthService } from './service/auth.service';
 import { NewTecnologiasComponent } from './components/tech/new-tecnologias.component';
 import { MatIconModule } from '@angular/material/icon';
 import { EditTecnologiasComponent } from './components/tech/edit-tecnologias.component';
-import { DeleteTecnologiasComponent } from './components/tech/delete-tecnologias.component';
 import { EditHomeComponent } from './components/home/edit-home.component';
+import { EditAboutComponent } from './components/about/edit-about.component';
+import { NewprojectsComponent } from './components/projects/newprojects.component';
+import { EditprojectsComponent } from './components/projects/editprojects.component';
+import { EditcontactComponent } from './components/contact/editcontac.component';
 
 
 
@@ -36,8 +39,11 @@ import { EditHomeComponent } from './components/home/edit-home.component';
     MainpageComponent,
     NewTecnologiasComponent,
     EditTecnologiasComponent,
-    DeleteTecnologiasComponent,
     EditHomeComponent,
+    EditAboutComponent,
+    NewprojectsComponent,
+    EditprojectsComponent,
+    EditcontactComponent,
   ],
   imports: [
     BrowserModule,

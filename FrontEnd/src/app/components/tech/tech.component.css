@@ -156,11 +156,19 @@ cursor: pointer;
 }
 
 .add {
-  border-radius:100%;
-  cursor: pointer;
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 10px rgb(104, 104, 106);
   font-size: 40px;
   display: flex;
-  align-items: center;
+  border-radius: 100%;
+  border-style: solid;
+  border-right-width: 2px;
+  padding: 0.3em;
+  width:50px;
+  text-align: center;
+  display: inline;
+  border-radius: 50%;
+  line-height: 80px;
   }
 
 

@@ -11,11 +11,11 @@ import { PersonaService } from 'src/app/service/persona.service';
 
 export class EditHomeComponent implements OnInit {
   personaEdit: Persona = null;
+
 constructor(private personaService: PersonaService, private activatedRouter: ActivatedRoute,
   private router: Router) { }
 
 ngOnInit(): void {
-  const id = this.activatedRouter.snapshot.params['id'];
   this.personaService.findPersona().subscribe(data => {this.personaEdit = data;
   }, 
     err => {
@@ -27,7 +27,7 @@ ngOnInit(): void {
 
 onEdit(): void {
   const id = this.activatedRouter.snapshot.params['id'];
-  this.personaService.editPersona(id, this.personaEdit).subscribe(
+  this.personaService.editPersona(id,this.personaEdit).subscribe(
     data => {
       this.router.navigate(['']);
     }, err => {

@@ -6,6 +6,12 @@
       <img src= {{about.imgaboutme}} alt="ImgAboutMe">
     </div>
     <div class="about-me">
+      <ul class="options" *ngIf="isLogged">
+        <li>
+        <span class="btn-label"></span>
+        <i class="fa-brands"><mat-icon routerLink="/editabout/{{about.id}}" *ngIf="isLogged">edit</mat-icon></i>
+        </li>
+        </ul>
       <p class="text">{{about.mydescription}}</p>
       <div class="hobbies">
         <h3>My <span>Interest</span></h3>

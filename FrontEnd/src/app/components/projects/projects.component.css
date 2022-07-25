@@ -1,19 +1,38 @@
-.projects-list{
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-left: 15px;
-    margin-bottom: 80px;
-    gap: 20px;
+.projects {
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.div-direction{
+  width: 100%;
+  display: flex;
+  flex-direction: colums-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+  
+}
+
+.projects-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3.125rem;
+  margin-bottom: 15px;
+  margin-left: 1cm;
+  margin-right: 15px;
   }
   
   .project-info{
     width: 18rem;
     height: 27rem;
-    background-image: linear-gradient(#000000, #300435, rgba(83, 9, 86, 0.3)), url("src/assets/img/backgrounds/binary_code.jpg");
+    background-image: linear-gradient(#000000, #250b46, rgba(98, 73, 115, 0.3)), url("src/assets/img/backgrounds/binary_code.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -72,4 +91,78 @@
     padding: 5px 15px;
     cursor: pointer;
   }
+
+  .project-info a:hover{
+    color: #000000;
+  }
+  
+  .fab-container {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+  }
+  
+  .iconbutton {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: #ffffff;
+    box-shadow: 10px 10px 5px #aaaaaa;
+  }
+  
+  
+  .iconbutton i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+  }
+  
+  .options li {
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px;
+  }
+  
+  .options {
+    list-style-type: none;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+  }
+  
+  .options2 {
+    list-style-type:none;
+    position: absolute;
+    bottom: 9cm;
+    right: -27px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .material-icons {
+  border-radius: 25% 40%;
+  text-shadow: 0 0 10px rgb(104, 104, 106);
+  cursor: pointer;
+  
+  }
+  
+  .add {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgb(104, 104, 106);
+    font-size: 40px;
+    display: flex;
+    border-radius: 100%;
+    border-style: solid;
+    border-right-width: 2px;
+    padding: 0.3em;
+    width:50px;
+    text-align: center;
+    display: inline;
+    border-radius: 50%;
+    line-height: 80px;
+    }
+  
+    
   

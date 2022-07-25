@@ -1,0 +1,24 @@
+<div class="box col-centered" style="text-align:center"
+data-aos="fade-up" data-aos-duration="1000" *ngIf="projectsEdit" >
+<h2>Edit project:</h2>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" >
+                <div class="inputBox">
+                    <input type="text" id="title" name="title" [(ngModel)]="projectsEdit.id" required>
+                    <label for="title">Edit project title:</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" id="tech" name="tech" [(ngModel)]="projectsEdit.tech" required>
+                    <label for="tech">Edit used skills:</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text"  id="description" name="description" [(ngModel)]="projectsEdit.description" required>
+                    <label for="description">Edit project description:</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text"  id="url" name="url" [(ngModel)]="projectsEdit.url" required>
+                    <label for="description">Edit related project URL:</label>
+                </div>
+                <input type="submit" name="Update skill" value="Update skill">
+                <input type="reset" (click)="cancel()" value="Cancel">
+            </form>
+        </div>

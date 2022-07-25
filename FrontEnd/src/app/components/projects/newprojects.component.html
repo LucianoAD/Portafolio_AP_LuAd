@@ -1,0 +1,26 @@
+<div class="box col-centered" style="text-align:center"
+data-aos="fade-up" data-aos-duration="1000">
+<h2>Add a new project</h2>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm" >
+                <div class="inputBox">
+                    <input type="text" id="title" name="title" [(ngModel)]="title" required>
+                    <label for="title">Enter your project name:</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" id="tech" name="tech" [(ngModel)]="tech" required>
+                    <label for="tech">Enter used skills:</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text"  id="description" name="description" [(ngModel)]="description" required>
+                    <label for="description">Enter a brief project description:</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text"  id="url" name="url" [(ngModel)]="url" required>
+                    <label for="url">Enter a project related URL: </label>
+                </div>
+                <input type="submit" name="Add Proyect" value="Add Proyect">
+                <input type="reset" (click)="cancel()" value="Cancel">
+            </form>
+        </div>
+
+

@@ -1,0 +1,25 @@
+<div class="box col-centered" style="text-align:center"
+data-aos="fade-right" data-aos-duration="1000" *ngIf="contactEdit" >
+<h2>Edit your contact infomation</h2>
+            <form (ngSubmit)="onEdit()" novalidate #f="ngForm" >
+                <div class="inputBox">
+                    <input type="text" id="gmail" name="gmail" [(ngModel)]="contactEdit.gmail" required>
+                    <label for="gmail">Enter your gmail: </label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" id="git" name="git" [(ngModel)]="contactEdit.git" required>
+                    <label for="git">Enter git repository URL:</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text"  id="linkedin" name="linkedin" [(ngModel)]="contactEdit.linkedin" required>
+                    <label for="img">Enter your linkedin URL:</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text"  id="hotmail" name="hotmail" [(ngModel)]="contactEdit.hotmail" required>
+                    <label for="img">Enter your hotmail:</label>
+                </div>
+                <input type="submit" name="Update information" value="Update contact information">
+                <input type="reset" (click)="cancel()" value="Cancel">
+            </form>
+        </div>
+
