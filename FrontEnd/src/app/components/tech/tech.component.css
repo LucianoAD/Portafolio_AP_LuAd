@@ -1,6 +1,4 @@
-.tech,
-.projects,
-.contact {
+.tech {
 
   width: 100%;
   display: flex;
@@ -9,8 +7,7 @@
   align-items: center;
 }
 
-.tech,
-.projects {
+.tech {
 
   height: auto;
 }
@@ -137,8 +134,8 @@ circle-progress {
 .options {
   list-style-type: none;
   position: absolute;
-  top: 50px;
-  right: 30px;
+  top: 0.5cm;
+  right: 8px;
 }
 
 .options2 {

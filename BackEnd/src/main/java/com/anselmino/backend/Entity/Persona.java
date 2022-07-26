@@ -15,7 +15,7 @@ import lombok.Setter;
 public class Persona {
     @Id
     @GeneratedValue ( strategy = GenerationType.IDENTITY)
-    private Long id;
+     private int Id;
     @NotNull
     @Size(min = 1, max = 50, message = "El nombre ingresado debe tener entre 1 y 50 carácteres")
     private String nombre;
@@ -25,5 +25,18 @@ public class Persona {
     private String cv;
     private String imgbackground;
     private String img;
+
+    public Persona() {
+    }
+
+    public Persona(String nombre, String apellido, String cv, String imgbackground, String img) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.cv = cv;
+        this.imgbackground = imgbackground;
+        this.img = img;
+    }
+    
+    
     
     }

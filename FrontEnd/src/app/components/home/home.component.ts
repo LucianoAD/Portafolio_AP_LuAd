@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit {
 
   isLogged = false;
 
+
   ngOnInit(): void {
     this.cargarPersona();
     if (this.tokenService.getToken()) {
@@ -36,7 +37,7 @@ export class HomeComponent implements OnInit {
   }
 
   cargarPersona(): void {
-    this.personaService.findPersona().subscribe(data => { this.persona = data; })
+    this.personaService.detail(1).subscribe(data => { this.persona = data });
   }
 
 

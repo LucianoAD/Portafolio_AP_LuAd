@@ -9,23 +9,27 @@ import { Persona } from '../model/persona.model';
 export class PersonaService {
   expURL = 'http://localhost:8080/personas/';
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-  public getPersona(): Observable<Persona>{
-    return this.http.get<Persona>(this.expURL+'traer');
+  public list(): Observable<Persona[]>{
+    return this.httpClient.get<Persona[]>(this.expURL + 'list');
   }
 
-    public findPersona(): Observable<Persona>{
-      return this.http.get<Persona>(this.expURL+'traer/perfil');
-    }
+  public detail(id: number): Observable<Persona>{
+    return this.httpClient.get<Persona>(this.expURL + `detail/${id}`);
+  } 
 
-    public save(persona: Persona): Observable<any>{
-      return this.http.post<any>(this.expURL + 'crear', persona);
-    }
+  public save(persona: Persona): Observable<any>{
+    return this.httpClient.post<any>(this.expURL + 'create', persona);
+  }
 
-  public editPersona(id: number, persona: Persona ): Observable<any>{
-      return this.http.put<any>(this.expURL + `editar/${id}`, persona);
-    }
+  public update(id: number, persona: Persona ): Observable<any>{
+    return this.httpClient.put<any>(this.expURL + `update/${id}`, persona);
+  }
+
+  public delete(id: number): Observable<any>{
+    return this.httpClient.delete<any>(this.expURL + `delete/${id}`);
+  }
+  }
 
     
-}

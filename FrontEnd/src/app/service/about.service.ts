@@ -10,18 +10,26 @@ import { About } from "../model/about.model";
 export class AboutService {
     expURL = 'http://localhost:8080/about/';
 
-    constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-    public getAbout(): Observable<About> {
-        return this.http.get<About>(this.expURL + 'traer/perfil');
-    }
+  public list(): Observable<About[]>{
+    return this.httpClient.get<About[]>(this.expURL + 'list');
+  }
 
-    public save(about: About): Observable<any> {
-        return this.http.post<any>(this.expURL + 'create', about);
-    }
+  public detail(id: number): Observable<About>{
+    return this.httpClient.get<About>(this.expURL + `detail/${id}`);
+  } 
 
+  public save(about: About): Observable<any>{
+    return this.httpClient.post<any>(this.expURL + 'create', about);
+  }
 
-    public editAbout(id: number, about: About): Observable<any> {
-        return this.http.put<any>(this.expURL + `edit/${id}`, about);
-    }
+  public update(id: number, about: About ): Observable<any>{
+    return this.httpClient.put<any>(this.expURL + `update/${id}`, about);
+  }
+
+  public delete(id: number): Observable<any>{
+    return this.httpClient.delete<any>(this.expURL + `delete/${id}`);
+  }
+
 }

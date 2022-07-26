@@ -12,11 +12,23 @@ import lombok.Setter;
 public class Contact {
     @Id
     @GeneratedValue ( strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     private String gmail;
     private String git;
     private String linkedin;
     private String hotmail;
+    
+    //Contructores
+
+    public Contact() {
+    }
+
+    public Contact(String gmail, String git, String linkedin, String hotmail) {
+        this.gmail = gmail;
+        this.git = git;
+        this.linkedin = linkedin;
+        this.hotmail = hotmail;
+    }
     
 }
 

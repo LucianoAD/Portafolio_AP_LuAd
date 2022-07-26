@@ -6,11 +6,9 @@ package com.anselmino.backend.Repository;
 
 import com.anselmino.backend.Entity.Contact;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-/**
- *
- * @author Luciano Anselmino
- */
-public interface IContactRepository extends JpaRepository<Contact,Long>{
+@Repository
+public interface IContactRepository extends JpaRepository<Contact, Integer> {
     
-}
+    }

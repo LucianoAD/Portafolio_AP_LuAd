@@ -85,8 +85,8 @@
   
   .options {
     position: absolute;
-    top: 50px;
-    right: 40px;
+    top: 1cm;
+    right: 8px;
   }
   
   
@@ -106,6 +106,8 @@
     display: inline;
     border-radius: 50%;
     line-height: 50px;
+    position: relative;
+    z-index: 1000;
   }
   
   

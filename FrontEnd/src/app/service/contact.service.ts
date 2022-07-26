@@ -10,18 +10,26 @@ import { contact } from '../model/contact.model';
 export class ContactService {
     expURL = 'http://localhost:8080/contact/';
 
-    constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-    public getContact(): Observable<contact> {
-        return this.http.get<contact>(this.expURL + 'traer/perfil');
-    }
+  public list(): Observable<contact[]>{
+    return this.httpClient.get<contact[]>(this.expURL + 'list');
+  }
 
-    public save(contact: contact): Observable<any> {
-        return this.http.post<any>(this.expURL + 'create', contact);
-    }
+  public detail(id: number): Observable<contact>{
+    return this.httpClient.get<contact>(this.expURL + `detail/${id}`);
+  } 
 
-    public editContact(id: number, contact: contact): Observable<any> {
-        return this.http.put<any>(this.expURL + `edit/${id}`, contact);
-    }
+  public save(contact: contact): Observable<any>{
+    return this.httpClient.post<any>(this.expURL + 'create', contact);
+  }
+
+  public update(id: number, contact: contact ): Observable<any>{
+    return this.httpClient.put<any>(this.expURL + `update/${id}`, contact);
+  }
+
+  public delete(id: number): Observable<any>{
+    return this.httpClient.delete<any>(this.expURL + `delete/${id}`);
+  }
+
 }
-

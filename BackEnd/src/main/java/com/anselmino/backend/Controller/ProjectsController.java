@@ -42,10 +42,10 @@ public class ProjectsController {
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id) {
         if (!impProjectsService.existsById(id)) {
-            return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
+            return new ResponseEntity(new Mensaje("El ID de proyecto no existe"), HttpStatus.NOT_FOUND);
         }
         impProjectsService.delete(id);
-        return new ResponseEntity(new Mensaje("skill eliminada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Peoyecto eliminado"), HttpStatus.OK);
     }
     
     @PostMapping("/create")
@@ -59,7 +59,7 @@ public class ProjectsController {
         Projects projects = new Projects(dtoproj.getTitle(), dtoproj.getTech(), dtoproj.getDescription(), dtoproj.getUrl());
         impProjectsService.save(projects);
         
-        return new ResponseEntity(new Mensaje("Skill agregada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Proyecto creado"), HttpStatus.OK);
     }
     
     @PutMapping("/update/{id}")
@@ -69,7 +69,7 @@ public class ProjectsController {
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
         //Compara nombre de experiencias
         if(impProjectsService.existsByTitle(dtoproj.getTitle()) && impProjectsService.getByTitle(dtoproj.getTitle()).get().getId() != id)
-            return new ResponseEntity(new Mensaje("Esa skill ya existe"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("El proyecto ya existe"), HttpStatus.BAD_REQUEST);
         //No puede estar vacio
         if(StringUtils.isBlank(dtoproj.getTitle()))
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
@@ -81,7 +81,7 @@ public class ProjectsController {
         projects.setUrl((dtoproj.getUrl()));
         
         impProjectsService.save(projects);
-        return new ResponseEntity(new Mensaje("La skill fue actualizada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("El proyecto fue actualizado"), HttpStatus.OK);
              
     }
 }  

@@ -1,7 +1,7 @@
 <div class="box col-centered" style="text-align:center"
 data-aos="fade-up" data-aos-duration="1000" *ngIf="aboutEdit" >
 <h2>Edit your infomation</h2>
-            <form (ngSubmit)="onEdit()" novalidate #f="ngForm" >
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" >
                 <div class="inputBox">
                     <input type="text" id="imgaboutme" name="imgaboutme" [(ngModel)]="aboutEdit.imgaboutme" required>
                     <label for="imgaboutme">Enter a URL picture: </label>

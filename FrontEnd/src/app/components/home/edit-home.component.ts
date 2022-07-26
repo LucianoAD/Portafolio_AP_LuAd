@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/service/persona.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-edit-home',
@@ -11,27 +12,37 @@ import { PersonaService } from 'src/app/service/persona.service';
 
 export class EditHomeComponent implements OnInit {
   personaEdit: Persona = null;
-
+  isLogged = false;
 constructor(private personaService: PersonaService, private activatedRouter: ActivatedRoute,
-  private router: Router) { }
+  private router: Router, private tokenService: TokenService) { }
 
 ngOnInit(): void {
-  this.personaService.findPersona().subscribe(data => {this.personaEdit = data;
-  }, 
-    err => {
-      alert("Error in form request");
+  const id = this.activatedRouter.snapshot.params['id'];
+  this.personaService.detail(id).subscribe(
+    data => {
+      this.personaEdit = data;
+    }, err => {
+      alert("Error in project edition");
       this.router.navigate(['']);
     }
   )
+
+
+if (this.tokenService.getToken()) {
+  this.isLogged = true;
+} else {
+  this.isLogged = false;
+}
 }
 
-onEdit(): void {
+onUpdate(): void {
   const id = this.activatedRouter.snapshot.params['id'];
-  this.personaService.editPersona(id,this.personaEdit).subscribe(
+  this.personaService.update(id, this.personaEdit).subscribe(
     data => {
       this.router.navigate(['']);
+      window.location.reload()
     }, err => {
-      alert("Error in profile modification 2");
+      alert("Error in project modification");
       this.router.navigate(['']);
       
     }
@@ -41,5 +52,7 @@ onEdit(): void {
 cancel(): void{
   this.router.navigate(['']);
 }
+
+ 
 
 }

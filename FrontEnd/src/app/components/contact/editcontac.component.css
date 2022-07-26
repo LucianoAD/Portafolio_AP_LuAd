@@ -1,21 +1,21 @@
 .box {
-    position: absolute;
-    top:76cm;
-    right: 0;
-    left: 0;
-    margin-bottom: 0.5cm;
-    margin-left: 0.5cm;
-    margin-right: auto;
-    transform: translate(-50%, -50%);
-    width: 10cm;
-    height: 7cm;
-    padding: 0.2cm;
-    box-sizing: border-box;
-    background-color: #fff;
-    border-radius: 0.625rem;
-    font-weight: bold;
-    font-size:medium;
-  }
+  position:fixed;
+  bottom: 3cm ;
+  overflow: auto;
+  right: 0;
+  left: 0;
+  margin:auto;
+  transform: translate(-50%, -50%);
+  width: 12cm;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-style:solid;
+  border-color: #232325;
+  background-color: #fff;
+  border-radius: 0.625rem;
+  font-weight: bold;
+}
+  
 
   .box h2 {
     margin: 0 0 0.4cm;

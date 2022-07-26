@@ -11,13 +11,18 @@ import { AboutService } from 'src/app/service/about.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  about: About = new About("","","","","","");
+  about: About = 
+    {
+      imgaboutme: "",
+      mydescription: "",
+      myinterest1:"",
+      myinterest2: "",
+      myinterest3: "",
+      myinterest4: "",
+      
+    };
 
-  constructor(public aboutService: AboutService, private tokenService: TokenService) {}
-
-  cargarAbout(): void {
-    this.aboutService.getAbout().subscribe(data => {this.about = data})
-  }
+  constructor(private aboutService: AboutService, private tokenService: TokenService, private router:Router) { }
 
   isLogged = false;
 
@@ -30,4 +35,30 @@ export class AboutComponent implements OnInit {
     }
   }
 
+  cargarAbout(): void {
+    this.aboutService.detail(1).subscribe(data => { this.about = data; })
+  }
+
+  delete(id?: number){
+    if(id != undefined){
+      this.aboutService.delete(id).subscribe(
+        data => {
+          this.cargarAbout();
+        }, err => {
+          alert("No se pudo borrar la descripcion");
+        }
+      )
+    }
+  }
+
+
+   editproject() {
+    this.router.navigate(['/editabout'])
+    document.location.href="/editabout"
+   }
+   
+
+
 }
+
+

@@ -1,7 +1,7 @@
 <div class="box col-centered" style="text-align:center"
 data-aos="fade-up" data-aos-duration="1000" *ngIf="personaEdit" >
 <h2>Edit profile</h2>
-            <form (ngSubmit)="onEdit()" novalidate #f="ngForm" >
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" >
                 <div class="inputBox">
                     <input type="text" id="nombre" name="nombre" [(ngModel)]="personaEdit.nombre" required>
                     <label for="nombre">Enter your name:</label>
