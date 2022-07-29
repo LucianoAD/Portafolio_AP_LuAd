@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/contact")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://frontproyectointegradorap.web.app")
 public class ContactController {
     @Autowired ImpContactService impContactService;
     
