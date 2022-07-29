@@ -8,7 +8,7 @@ import { About } from "../model/about.model";
     providedIn: 'root'
 })
 export class AboutService {
-    expURL = 'http://localhost:8080/about/';
+    expURL = 'https:/backproyectointegradorap.herokuapp.com/about/';
 
   constructor(private httpClient: HttpClient) { }
 

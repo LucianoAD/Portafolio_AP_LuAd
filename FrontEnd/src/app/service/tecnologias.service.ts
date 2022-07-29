@@ -8,7 +8,7 @@ import { Tecnologias } from '../model/tecnologias.model';
   providedIn: 'root'
 })
 export class TecnologiasService {
-  expURL = 'http://localhost:8080/tech/';
+  expURL = 'https://backproyectointegradorap.herokuapp.com/tech/';
 
   constructor(private httpClient: HttpClient) { }
 

@@ -8,7 +8,7 @@ import { contact } from '../model/contact.model';
 })
 
 export class ContactService {
-    expURL = 'http://localhost:8080/contact/';
+    expURL = 'https://backproyectointegradorap.herokuapp.com/contact/';
 
   constructor(private httpClient: HttpClient) { }
 
