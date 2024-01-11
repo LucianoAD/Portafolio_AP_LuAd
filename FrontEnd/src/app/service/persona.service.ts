@@ -7,7 +7,7 @@ import { Persona } from '../model/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-  expURL = 'https://backproyectointegradorap.herokuapp.com/personas/';
+  expURL = 'https://backportafolio-lansel.koyeb.app/personas/';
 
   constructor(private httpClient: HttpClient) { }
 

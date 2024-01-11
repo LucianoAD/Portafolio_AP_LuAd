@@ -8,7 +8,7 @@ import { Tecnologias } from '../model/tecnologias.model';
   providedIn: 'root'
 })
 export class TecnologiasService {
-  expURL = 'https://backproyectointegradorap.herokuapp.com/tech/';
+  expURL = 'https://backportafolio-lansel.koyeb.app/tech/';
 
   constructor(private httpClient: HttpClient) { }
 

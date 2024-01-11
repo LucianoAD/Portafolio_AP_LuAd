@@ -8,7 +8,7 @@ import { About } from "../model/about.model";
     providedIn: 'root'
 })
 export class AboutService {
-    expURL = 'https:/backproyectointegradorap.herokuapp.com/about/';
+    expURL = 'https://backportafolio-lansel.koyeb.app/about/';
 
   constructor(private httpClient: HttpClient) { }
 

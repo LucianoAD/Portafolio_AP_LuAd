@@ -7,7 +7,7 @@ import { projects } from '../model/projects.model';
   providedIn: 'root'
 })
 export class ProjectsService {
-  expURL = 'https://backproyectointegradorap.herokuapp.com/projects/';
+  expURL = 'https://backportafolio-lansel.koyeb.app/projects/';
 
   constructor(private httpClient: HttpClient) { }
 

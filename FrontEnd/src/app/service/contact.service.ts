@@ -8,7 +8,7 @@ import { contact } from '../model/contact.model';
 })
 
 export class ContactService {
-    expURL = 'https://backproyectointegradorap.herokuapp.com/contact/';
+    expURL = 'https://backportafolio-lansel.koyeb.app/contact/';
 
   constructor(private httpClient: HttpClient) { }
 

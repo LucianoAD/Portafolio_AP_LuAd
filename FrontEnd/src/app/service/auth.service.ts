@@ -9,7 +9,7 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'https://backproyectointegradorap.herokuapp.com/auth/';
+  authURL = 'https://backportafolio-lansel.koyeb.app/auth/';
 
   constructor(private httpClient: HttpClient) { }
   public nuevo(nuevoUsuario = NuevoUsuario): Observable<any>{
