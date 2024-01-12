@@ -7,10 +7,9 @@ Los datos de la aplicación se almacenaron en una base de datos MySQL gestionada
 
 A continuación, encontrarás los enlaces a las diferentes partes del proyecto:
 
-    Frontend del Portafolio (Firebase):
+   -  Frontend del Portafolio (Firebase):
     https://frontproyectointegradorap.web.app/
-
-    APIs del Backend (Koyeb):
+- APIs del Backend (Koyeb):
     https://backportafolio-lansel.koyeb.app/
 
 
